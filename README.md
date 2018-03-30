@@ -11,9 +11,9 @@ and Danfoss LC-13 014G0013 thermostats.
 ## Requirements
 
 The Z-Wave devices are interfaced using
-`python-openzwave <https://github.com/OpenZWave/python-openzwave>`.
+`python-openzwave <https://github.com/OpenZWave/python-openzwave>`_.
 
 HomeKit supported is provided through
-`HAP-python <https://github.com/ikalchev/HAP-python>`.
+`HAP-python <https://github.com/ikalchev/HAP-python>`_.
 
 See the `Dockerfile` for the required packages.
