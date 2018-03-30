@@ -1,7 +1,9 @@
 # zwave2homekit
 Expose Z-Wave accessories to HomeKit
 
-For now it does nothing more than exposing all thermostats to HomeKit.
+For now it exposes all thermostats to HomeKit.
+The setpoint can be controlled through HomeKit.
+Changing the setpoint on the device itself is also propagated to HomeKit.
 
 This was tested using Docker on Synology,
 an Aeotec Gen5 Z-Wave stick,
