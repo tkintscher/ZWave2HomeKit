@@ -37,7 +37,7 @@ See the [Dockerfile](Dockerfile) for the required packages.
 The Docker image can be installed on Synology.
 When adding the container, ensure that
 
- * running with "high privileged" is activated
+ * "Execute container using high privilege" is activated
    (necessary for accessing the Z-Wave device,
     as Synology's interface does not allow configuring passthrough of single devices),
  * some directory on the NAS is bound to `/config`,
