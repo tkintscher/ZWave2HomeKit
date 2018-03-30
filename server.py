@@ -13,7 +13,7 @@ device_file = os.getenv("ZWAVE_DEVICE", "/dev/ttyACM0")
 bridge_name = os.getenv("BRIDGE_NAME",  "Z-Wave Bridge")
 bridge_mac  = os.getenv("MAC",          "AA:11:22:33:44:55")
 bridge_pin  = os.getenv("PINCODE",      "123-45-678")
-ds_hostname = os.getenv("DS_HOSTNAME",  "diskstation")
+config_path = '/config'
 
 
 from pyhap.accessory import Accessory, Bridge, Category
@@ -77,8 +77,8 @@ from openzwave.option import ZWaveOption
 
 
 options = ZWaveOption(device,
-                      #config_path="/home/thomas/zwave2homekit/config",
-                      user_path="/config",
+                      #config_path=config_path,
+                      user_path=config_path,
                       cmd_line="")
 
 options.set_log_file("OZW_Log.txt")
@@ -148,7 +148,7 @@ for node in network.nodes:
 bridge = Bridge(display_name=bridge_name, mac=bridge_mac, pincode=bridge_pin)
 for thermostat in thermostats.values():
     bridge.add_accessory(thermostat)
-driver = AccessoryDriver(bridge, port=51826, persist_file="/config/accessory.state")
+driver = AccessoryDriver(bridge, port=51826, persist_file=os.path.join(config_path, "accessory.state"))
 signal.signal(signal.SIGINT,  driver.signal_handler)
 signal.signal(signal.SIGTERM, driver.signal_handler)
 driver.start()
