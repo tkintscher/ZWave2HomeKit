@@ -39,6 +39,5 @@ ENV ZWAVE_DEVICE /dev/ttyACM0
 ENV BRIDGE_NAME  Z-Wave Bridge
 ENV MAC          AA:11:22:33:44:55
 ENV PINCODE      123-45-678
-ENV DS_HOSTNAME  diskstation
 
 CMD ["python3", "/root/server.py"]
