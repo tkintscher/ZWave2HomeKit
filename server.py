@@ -76,7 +76,7 @@ from openzwave.network import ZWaveNetwork
 from openzwave.option import ZWaveOption
 
 
-options = ZWaveOption(device,
+options = ZWaveOption(device_file,
                       #config_path=config_path,
                       user_path=config_path,
                       cmd_line="")
