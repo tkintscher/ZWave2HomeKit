@@ -21,7 +21,7 @@ The Z-Wave devices are interfaced using
 HomeKit supported is provided through
 [HAP-python](https://github.com/ikalchev/HAP-python>).
 
-See the [Dockerfile](Dockerfile) for the required packages.
+See the [Dockerfile](Dockerfile) for all required packages.
 
 
 ## Environment Variables
