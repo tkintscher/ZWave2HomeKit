@@ -1,5 +1,5 @@
 # ZWave2HomeKit
-Expose Z-Wave accessories to HomeKit
+Expose Z-Wave accessories to HomeKit.
 
 
 ## Features
@@ -15,11 +15,9 @@ and Danfoss LC-13 014G0013 thermostats.
 
 ## Requirements
 
-The Z-Wave devices are interfaced using
-[python-openzwave](https://github.com/OpenZWave/python-openzwave>).
+The Z-Wave devices are accessed using [python-openzwave](https://github.com/OpenZWave/python-openzwave).
 
-HomeKit supported is provided through
-[HAP-python](https://github.com/ikalchev/HAP-python>).
+HomeKit supported is provided through [HAP-python](https://github.com/ikalchev/HAP-python).
 
 See the [Dockerfile](Dockerfile) for all required packages.
 
@@ -38,7 +36,6 @@ The Docker image can be installed on Synology.
 When adding the container, ensure that
 
  * "Execute container using high privilege" is activated
-   (necessary for accessing the Z-Wave device,
-    as Synology's interface does not allow configuring passthrough of single devices),
+   (necessary for accessing the Z-Wave device; Synology's interface does not allow passthrough of individual USB devices),
  * some directory on the NAS is bound to `/config`,
  * and environment variables are set as desired (see above).

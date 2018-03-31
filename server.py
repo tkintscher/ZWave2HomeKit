@@ -12,7 +12,7 @@ logger = logging.getLogger('openzwave')
 device_file = os.getenv("ZWAVE_DEVICE", "/dev/ttyACM0")
 bridge_name = os.getenv("BRIDGE_NAME",  "Z-Wave Bridge")
 bridge_mac  = os.getenv("MAC",          "AA:11:22:33:44:55")
-bridge_pin  = os.getenv("PINCODE",      "123-45-678")
+bridge_pin  = os.getenv("PINCODE",      "123-45-678").encode('ascii')
 config_path = '/config'
 
 
